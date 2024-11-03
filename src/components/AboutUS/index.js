@@ -55,8 +55,8 @@ const styles = {
   },
   divider: {
     width: "90vw",
-    height: "2px",
-    backgroundColor: "#007bff",
+    height: "1px",
+    backgroundColor: "#66CCFF",
     margin: "10px auto 30px",
   },
   imageContainer: {

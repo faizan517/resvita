@@ -62,3 +62,9 @@
   src: local("DMSansRegular"),
    url("../src/utils/DM_Sans/static/DMSans-Regular.ttf") format("truetype");
  }
+ @font-face {
+  font-family: "Heebo";
+  src: local("HeeboRegular"),
+   url("../src/utils/helvetica-255/Helvetica.ttf") format("truetype");
+ }
+ 

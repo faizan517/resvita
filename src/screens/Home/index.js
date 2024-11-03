@@ -4,15 +4,23 @@ import SkinTreatmentBanner from '../../components/AboutUS'
 import Slider from '../../components/Slider'
 import Start from '../../components/Start'
 import ProteinTherapy from '../../components/ProtienTherapy'
+import Footer from '../../components/Footer'
+import HealthcareNews from '../../components/News'
+import MeetOurTeam from '../../components/Team'
+import Contact from '../../ContactUs'
 
 function Home() {
   return (
     <div>
-        <DrawerAppBar/>
+        {/* <DrawerAppBar/> */}
          {/* <Slider/> */}
-        {/* <Start/> */}
-        {/* <SkinTreatmentBanner/> */}
+        <Start/>
+        <SkinTreatmentBanner/>
         <ProteinTherapy/>
+        <HealthcareNews/>
+        <MeetOurTeam/>
+        {/* <Contact/> */}
+        <Footer/>
     </div>
   )
 }

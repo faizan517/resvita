@@ -17,6 +17,7 @@ const styles = {
     fontSize: { xs: '40px', sm: '60px', md: '90px', lg: '110px' }, // Responsive font size
     fontWeight: 700,
     textAlign: 'left',
+    lineHeight:1
   },
   poweredBySyntheticBiology: {
     color: '#ffffff',
@@ -35,6 +36,7 @@ const styles = {
     fontWeight: 400,
     textAlign: 'left',
     marginTop: { xs: 1, md: 2 },
+    width:650
   },
   dna: {
     position: 'absolute',
@@ -63,10 +65,9 @@ export default function Start() {
           height: '100%',
           paddingX: { xs: 2, md: 10 }, // Adjust padding for responsiveness
           paddingY: { xs: 2, md: 10 }, // Adjust padding for responsiveness
-          marginRight:40
         }}
       >
-        <Grid item xs={12}>
+        <Grid item xs={6} style={{marginRight:200}}>
           <Typography variant="h1" sx={styles.advancedSkinTreatments}>
             ADVANCED SKIN
             <br />

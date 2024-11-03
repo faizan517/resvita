@@ -15,5 +15,8 @@ export const Fonts = {
     Helvetica:{
         fontFamily:'Helvetica'
     },
+    Heboo:{
+        fontFamily:'Heboo'
+    },
   };
   
