@@ -7,19 +7,21 @@ import ProteinTherapy from '../../components/ProtienTherapy'
 import Footer from '../../components/Footer'
 import HealthcareNews from '../../components/News'
 import MeetOurTeam from '../../components/Team'
-import Contact from '../../ContactUs'
+import Contact from '../../Contact'
+import Career from '../../components/Career'
 
 function Home() {
   return (
     <div>
-        {/* <DrawerAppBar/> */}
+        <DrawerAppBar/>
          {/* <Slider/> */}
         <Start/>
+        <Career/>
         <SkinTreatmentBanner/>
-        <ProteinTherapy/>
+        {/* <ProteinTherapy/> */}
         <HealthcareNews/>
         <MeetOurTeam/>
-        {/* <Contact/> */}
+        <Contact/>
         <Footer/>
     </div>
   )
