@@ -8,19 +8,22 @@ import Footer from '../../components/Footer'
 import HealthcareNews from '../../components/News'
 import MeetOurTeam from '../../components/Team'
 import Contact from '../../Contact'
-import Career from '../../components/Career'
+
+import Header from '../../components/Header'
+import Advisors from '../../components/Advisors'
 
 function Home() {
   return (
     <div>
-        <DrawerAppBar/>
-         {/* <Slider/> */}
+        <Header/>
         <Start/>
-        <Career/>
+        {/* <Career/> */}
         <SkinTreatmentBanner/>
         {/* <ProteinTherapy/> */}
         <HealthcareNews/>
+         <Slider/>
         <MeetOurTeam/>
+        {/* <Advisors/> */}
         <Contact/>
         <Footer/>
     </div>

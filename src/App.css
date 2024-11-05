@@ -1,3 +1,6 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 .App {
   text-align: center;
 }
@@ -65,6 +68,11 @@
  @font-face {
   font-family: "Heebo";
   src: local("HeeboRegular"),
-   url("../src/utils/helvetica-255/Helvetica.ttf") format("truetype");
+   url("../src/utils/heebo/Heebo-Regular.ttf") format("truetype");
+ }
+ @font-face {
+  font-family: "Manrope";
+  src: local("ManropeRegular"),
+   url("../src/utils/Manrope/static/Manrope-Regular.ttf") format("truetype");
  }
  

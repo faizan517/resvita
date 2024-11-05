@@ -168,7 +168,7 @@ const Contact = () => {
                 style={{
                   backgroundColor: "white",
                   height: 60,
-                  width: 80,
+                  width: 60,
                   borderRadius: "100%",
                   display: "flex",
                   justifyContent: "center",

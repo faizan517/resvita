@@ -9,7 +9,7 @@ function ContactUs() {
   return (
     <div>
         <DrawerAppBar/>
-         {/* <Slider/> */}
+         {/* <Slider/> */}  
         {/* <Start/> */}
         <Career/>
         {/* <SkinTreatmentBanner/> */}
@@ -17,7 +17,7 @@ function ContactUs() {
         {/* <MeetOurTeam/> */}
         <Contact/>
         <HealthcareNews/>
-        <Footer/>
+        <Footer isActive/>
     </div>
   )
 }
