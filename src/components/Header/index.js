@@ -7,7 +7,7 @@ function Header() {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home"><img src={require('../../assets/mainLogo.png')}/></Navbar.Brand>
+        <Navbar.Brand href="/"><img src={require('../../assets/mainLogo.png')}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -17,7 +17,7 @@ function Header() {
             <Nav.Link eventKey={2} href="#memes">
               Teams
             </Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link eventKey={2} href="/contact">
               Careers
             </Nav.Link>
           </Nav>

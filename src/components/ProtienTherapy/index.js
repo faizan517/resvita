@@ -41,7 +41,7 @@ const cardData = [
 
 export default function ContinuousProteinTherapy() {
   return (
-    <Box sx={{ padding: 4, backgroundColor: "#FFFFFF" }}>
+    <Box sx={{ padding: 4, }}>
       <Typography
         variant="h4"
         align="center"

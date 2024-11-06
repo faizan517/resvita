@@ -53,7 +53,7 @@ const Contact = () => {
         height: "50vw",
       }}
     >
-      <Box>
+      <Container>
         <Grid container spacing={4} justifyContent="center" alignItems="center">
           {/* Left Column */}
           <Grid item xs={12} md={4}>
@@ -267,7 +267,7 @@ const Contact = () => {
             </Box>
           </Grid>
         </Grid>
-      </Box>
+      </Container>
     </Box>
   );
 };

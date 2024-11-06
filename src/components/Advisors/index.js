@@ -1,40 +1,92 @@
-import React from 'react';
-import { Box, Typography, Avatar, Grid, Card, CardContent } from '@mui/material';
+import React, { useState } from 'react';
+import advisro1 from '../../assets/advisor1.png'
+import advisro2 from '../../assets/advisor2.png'
+import advisro3 from '../../assets/advisor3.png'
+import advisro4 from '../../assets/advisor4.png'
+import advisro5 from '../../assets/advisor5.png'
 
-const advisors = [
-  { name: "Dr. Lisa Beck, MD", image: "/path/to/image1.jpg" },
-  { name: "Advisor 2", image: "/path/to/image2.jpg" },
-  { name: "Advisor 3", image: "/path/to/image3.jpg" },
-  { name: "Advisor 4", image: "/path/to/image4.jpg" },
-  { name: "Advisor 5", image: "/path/to/image5.jpg" },
-];
+ const AdvisorSection = () => {
+  const advisorData = [
+    { id: 1, imageSrc: advisro1 },
+    { id: 2, imageSrc: advisro2 },
+    { id: 3, imageSrc: advisro3 },
+    { id: 4, imageSrc: advisro4 },
+    { id: 5, imageSrc: advisro5 }
+  ];
 
-const Advisors = () => {
+  const styles = {
+    advisorSection: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      // backgroundColor: 'black',
+      height: '100vh', // Full viewport height
+      paddingBottom: '82px',
+      overflow: 'hidden',
+    },
+    sectionTitle: {
+      color: '#fff',
+      font: '700 48px Inter, sans-serif',
+      textAlign: 'center',
+      marginBottom: '36px',
+    },
+    advisorGrid: {
+      display: 'flex',
+      gap: '16px',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      width: '80%',
+    },
+    advisorCard: {
+      backgroundColor: '#fff',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '150px',
+      height: 'auto',
+      paddingTop: '116px',
+      transition: 'all 0.5s ease',
+      cursor: 'pointer',
+    },
+    advisorImage: {
+      width: '150px',
+      aspectRatio: '0.42',
+      objectFit: 'cover',
+      // positin:'fixed'
+      // objectPosition: 'center',
+      // transition: 'all 0.5s ease',
+    },
+  };
+
   return (
-    <Box sx={{ backgroundColor: "#000", color: "#fff", py: 5 }}>
-      <Typography variant="h4" align="center" gutterBottom>
-        Meet Our Advisors
-      </Typography>
-      <Grid container justifyContent="center" spacing={3}>
-        {advisors.map((advisor, index) => (
-          <Grid item key={index} xs={12} sm={6} md={2}>
-            <Card sx={{ backgroundColor: "transparent", boxShadow: "none" }}>
-              <Avatar
-                alt={advisor.name}
-                src={advisor.image}
-                sx={{ width: 100, height: 100, mx: "auto", borderRadius: "8px" }}
-              />
-              <CardContent>
-                <Typography variant="body1" align="center" sx={{ color: "#fff" }}>
-                  {advisor.name}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+    <section style={styles.advisorSection}>
+      <h2 style={styles.sectionTitle}>Meet Our Advisors</h2>
+      <div style={styles.advisorGrid}>
+        {advisorData.map((advisor) => (
+          <div
+            key={advisor.id}
+            style={styles.advisorCard}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.width = '330px';
+              e.currentTarget.style.paddingTop = '0';
+              e.currentTarget.querySelector('img').style.aspectRatio = '0.76';
+              e.currentTarget.querySelector('img').style.width = '330px';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.width = '150px';
+              e.currentTarget.style.paddingTop = '116px';
+              e.currentTarget.querySelector('img').style.aspectRatio = '0.42';
+              e.currentTarget.querySelector('img').style.width = '150px';
+            }}
+          >
+            <img src={advisor.imageSrc} alt="Advisor" style={styles.advisorImage} />
+          </div>
         ))}
-      </Grid>
-    </Box>
+      </div>
+    </section>
   );
 };
 
-export default Advisors;
+export default AdvisorSection;

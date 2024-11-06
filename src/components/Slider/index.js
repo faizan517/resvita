@@ -6,24 +6,42 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import FaceIcon from '@mui/icons-material/Face';
 import HealingIcon from '@mui/icons-material/Healing';
 import SpaIcon from '@mui/icons-material/Spa';
+import image1 from '../../assets/Anti-aging.png'
+import image2 from '../../assets/body.png'
+import image3 from '../../assets/face.png'
+import image4 from '../../assets/foot.png'
+import image5 from '../../assets/foot2.png'
+import { FaArrowLeft,FaArrowRight } from "react-icons/fa6";
+import { Fonts } from '../../utils/Fonts';
+
 
 const cardData = [
   {
-    icon: <HealingIcon style={{ fontSize: 48, color: '#00B8D4' }} />,
+    icon: <img src={image1} style={{ fontSize: 48, color: '#00B8D4' }} />,
     title: 'Netherton Syndrome',
     description: 'A rare genetic skin disorder characterized by redness, scaling, and fragile skin.',
   },
   {
-    icon: <FaceIcon style={{ fontSize: 48, color: '#00B8D4' }} />,
+    icon: <img src={image2} style={{ fontSize: 48, color: '#00B8D4' }} />,
     title: 'Atopic Dermatitis',
     description: 'A chronic skin condition marked by inflammation, itching, and dry, scaly patches.',
   },
   {
-    icon: <SpaIcon style={{ fontSize: 48, color: '#00B8D4' }} />,
+    icon: <img src={image3} style={{ fontSize: 48, color: '#00B8D4' }} />,
     title: 'Acne vulgaris',
     description: 'A common skin condition featuring pimples, blackheads, and cysts.',
   },
-  // Add more items if needed
+  
+  {
+    icon: <img src={image4} style={{ fontSize: 48, color: '#00B8D4' }} />,
+    title: ' Anti-aging',
+    description: 'Anti-aging as a disease views aging as a treatable condition.',
+  },
+  {
+    icon: <img src={image5} style={{ fontSize: 48, color: '#00B8D4' }} />,
+    title: 'Chronic wounds',
+    description: 'Chronic wounds are a disease marked by prolonged healing failure.',
+  },
 ];
 
 // Custom Arrow Components
@@ -42,7 +60,7 @@ function NextArrow(props) {
         '&:hover': { backgroundColor: '#1565C0' },
       }}
     >
-      <ArrowForwardIosIcon />
+      <FaArrowRight  />
     </IconButton>
   );
 }
@@ -62,7 +80,7 @@ function PrevArrow(props) {
         '&:hover': { backgroundColor: '#1565C0' },
       }}
     >
-      <ArrowBackIosIcon />
+      <FaArrowLeft  />
     </IconButton>
   );
 }
@@ -93,8 +111,8 @@ const SkinDisorderSlider = () => {
   };
 
   return (
-    <Box sx={{ padding: 4, backgroundColor: '#121212' }}>
-      <Typography variant="h4" align="center" color="white" gutterBottom>
+    <Box sx={{ padding: 4}}>
+      <Typography variant="h4" align="center" color="white" style={{fontWeight:600,fontSize:40,textAlign:'center',...Fonts.Inter}} gutterBottom>
         New Approaches To Treating Skin Disorders
       </Typography>
       <Slider {...settings}>
@@ -102,20 +120,27 @@ const SkinDisorderSlider = () => {
           <Card
             key={index}
             sx={{
-              maxWidth: 300,
+              maxWidth: 330,
+              height:265,
               margin: '0 auto',
               backgroundColor: '#333333',
               color: 'white',
               boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
-              borderRadius: 2,
+              borderBottomLeftRadius: 12,
+              borderBottomRightRadius: 12,
+              borderTopWidth: 3,
+              borderTopColor: '#005F99',
+              borderTopStyle:'solid',
+              borderTopRightRadius:0,
+              borderTopLeftRadius:0,margin:1
             }}
           >
-            <CardContent sx={{ textAlign: 'center' }}>
+            <CardContent sx={{ textAlign: 'left',padding: 3,paddingLeft: 4 }}>
               {item.icon}
-              <Typography variant="h6" sx={{ fontWeight: 'bold', marginTop: 2 }}>
+              <Typography variant="h6" sx={{padding: 1,  ...Fonts.Manrope,fontWeight:700,fontSize:18 }}>
                 {item.title}
               </Typography>
-              <Typography variant="body2" sx={{ marginTop: 1 }}>
+              <Typography  sx={{ padding: 1, ...Fonts.Manrope,fontWeight:400,fontSize:12,lineHeight:2.6  }}>
                 {item.description}
               </Typography>
             </CardContent>

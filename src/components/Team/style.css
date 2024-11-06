@@ -1,7 +1,4 @@
-:root {
-    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
-  }
-  
+
   .main-container {
     overflow: hidden;
   }
@@ -9,19 +6,21 @@
   .container {
     position: relative;
     display: inline-block; /* Allows images to be inline and hover effect to work */
+
   }
   
   .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 1;
+    right: 1;
     height: 100%;
-    width: 100%;
+    width: 90%;
     opacity: 0;
     transition: opacity 0.5s ease;
     background-color: rgba(0, 140, 186, 0.8); /* Slight transparency for better visuals */
+
   }
   
   .container:hover .overlay {
@@ -34,8 +33,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    font-size: 24px;
+    font-size: 10px;
     font-weight: bold;
     text-align: center;
   }
+  
   

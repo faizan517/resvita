@@ -3,21 +3,26 @@ import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import person1 from "../../assets/p1.png";
 import person2 from "../../assets/p2.png";
 import "./style.css";
+import { Fonts } from "../../utils/Fonts";
 
 export default function Main() {
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <Box
       sx={{
         width: "100%",
-        maxWidth: "1440px",
+        // maxWidth: "1440px",
         height: { xs: "auto", md: "942px" },
         position: "relative",
         overflow: "hidden",
         margin: "0 auto",
-        backgroundColor: "black",
+        // backgroundColor: "black",
         padding: { xs: "20px", md: "0" },
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center'
       }}
     >
       {/* Team Intro Text */}
@@ -82,38 +87,69 @@ export default function Main() {
             alignItems: "center",
             justifyContent: { xs: "center", md: "flex-end" },
             alignSelf: "flex-end",
-            backgroundColor:'pink'
           }}
         >
           {/* Team Member 1 with Overlay */}
-          <Box
-            className="container"
-            sx={{ position: "relative", }}
-          >
+          <Box className="container" sx={{ position: "relative" }}>
             <Box
               sx={{
-                width: { xs: "200px", md: "249px" },
-                height: { xs: "220px", md: "280px" },
+                width: { xs: "150px", md: "249px" },
+                height: { xs: "180px", md: "280px" },
                 backgroundImage: `url(${person2})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             />
             <Box className="overlay">
-              <Typography className="text">Hello World</Typography>
+              <Typography
+                className="text"
+                style={{
+                  fontSize: 15,
+                  width: "100%",
+                  ...Fonts.Inter,
+                  fontWeight: 700,
+                }}
+              >
+                DR. Amin Zargar, PHD <br />{" "}
+                <p style={{ fontSize: 12, ...Fonts.Inter, fontWeight: 400 }}>
+                  {" "}
+                  Chief Executive Officer
+                </p>
+              </Typography>
+              {/* <Typography className="text" style={{}}>Chief Executive Officer</Typography> */}
             </Box>
           </Box>
 
           {/* Team Member 2 */}
-          <Box
-            sx={{
-              width: { xs: "200px", md: "249px" },
-              height: { xs: "220px", md: "280px" },
-              backgroundImage: `url(${person1})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
+          <Box className="container" sx={{ position: "relative" }}>
+            <Box
+              sx={{
+                width: { xs: "150px", md: "249px" },
+                height: { xs: "180px", md: "280px" },
+                backgroundImage: `url(${person1})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+            <Box className="overlay">
+              <Typography
+                className="text"
+                style={{
+                  fontSize: 15,
+                  width: "100%",
+                  ...Fonts.Inter,
+                  fontWeight: 700,
+                }}
+              >
+                DR. Jay Keasling, PHD <br />{" "}
+                <p style={{ fontSize: 12, ...Fonts.Inter, fontWeight: 400 }}>
+                  {" "}
+                  Co-Founder & Board Member
+                </p>
+              </Typography>
+              {/* <Typography className="text" style={{}}>Chief Executive Officer</Typography> */}
+            </Box>
+          </Box>
         </Box>
 
         {/* Second Row with Masked Photos */}
@@ -127,15 +163,16 @@ export default function Main() {
             justifyContent: { xs: "center", md: "flex-start" },
           }}
         >
-          {[...Array(4)].map((_, index) => (
+          {[person1, person2, person1, person2].map((img, index) => (
             <Box
               key={index}
               sx={{
                 width: { xs: "150px", md: "249px" },
                 height: { xs: "180px", md: "280px" },
+                backgroundImage: `url(${img})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
                 backgroundColor: "#ffffff",
-                WebkitMaskImage: `url(${person1})`,
-                WebkitMaskSize: "cover",
               }}
             />
           ))}

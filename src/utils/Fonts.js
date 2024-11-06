@@ -18,5 +18,8 @@ export const Fonts = {
     Heboo:{
         fontFamily:'Heboo'
     },
+    Manrope:{
+        fontFamily:'Manrope'
+    },
   };
   
