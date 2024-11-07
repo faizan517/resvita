@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
-import advisro1 from '../../assets/advisor1.png'
-import advisro2 from '../../assets/advisor2.png'
-import advisro3 from '../../assets/advisor3.png'
-import advisro4 from '../../assets/advisor4.png'
-import advisro5 from '../../assets/advisor5.png'
+import React from 'react';
+import advisro1 from '../../assets/advisor1.png';
+import advisro2 from '../../assets/advisor2.png';
+import advisro3 from '../../assets/advisor3.png';
+import advisro4 from '../../assets/advisor4.png';
+import advisro5 from '../../assets/advisor5.png';
+import { Fonts } from '../../utils/Fonts';
 
- const AdvisorSection = () => {
+const AdvisorSection = () => {
   const advisorData = [
-    { id: 1, imageSrc: advisro1 },
-    { id: 2, imageSrc: advisro2 },
-    { id: 3, imageSrc: advisro3 },
-    { id: 4, imageSrc: advisro4 },
-    { id: 5, imageSrc: advisro5 }
+    { id: 1, imageSrc: advisro1, name: 'Dr. Lisa Beck, MD' },
+    { id: 2, imageSrc: advisro2, name: 'Dr. Eric Simpson, MD, MCR' },
+    { id: 3, imageSrc: advisro3, name: 'Dr. Gregory Went, PhD' },
+    { id: 4, imageSrc: advisro4, name: 'Dr. Keith Choate, MD, PhD' },
+    { id: 5, imageSrc: advisro5, name: 'Steven Lo' }
   ];
 
   const styles = {
@@ -20,7 +21,6 @@ import advisro5 from '../../assets/advisor5.png'
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      // backgroundColor: 'black',
       height: '100vh', // Full viewport height
       paddingBottom: '82px',
       overflow: 'hidden',
@@ -30,6 +30,7 @@ import advisro5 from '../../assets/advisor5.png'
       font: '700 48px Inter, sans-serif',
       textAlign: 'center',
       marginBottom: '36px',
+      marginTop:10
     },
     advisorGrid: {
       display: 'flex',
@@ -45,18 +46,33 @@ import advisro5 from '../../assets/advisor5.png'
       alignItems: 'center',
       justifyContent: 'center',
       width: '150px',
-      height: 'auto',
+      height: '30vw',
       paddingTop: '116px',
-      transition: 'all 0.5s ease',
       cursor: 'pointer',
+      transition: 'all 0.75s ease-in-out', // Slow and smooth transition for all properties
+      position: 'relative', // For positioning the name at the bottom
+      overflow: 'hidden', // Prevent text overflow
     },
     advisorImage: {
       width: '150px',
       aspectRatio: '0.42',
       objectFit: 'cover',
-      // positin:'fixed'
-      // objectPosition: 'center',
-      // transition: 'all 0.5s ease',
+      transition: 'all 0.75s ease-in-out', // Transition on both width and aspectRatio
+    },
+    advisorName: {
+      padding:20,
+      position: 'absolute', // Position it at the bottom of the card
+      bottom: '0px', // Space from the bottom
+      height:'75px',
+      width: '100%',
+      backgroundColor:'#0099E6',
+      textAlign: 'center',
+      color: 'white', // Text color
+      fontSize: '20px',
+      fontWeight: '700',
+      opacity: 0, // Hidden by default
+      transition: 'opacity 0.3s ease-in-out', // Smooth transition for opacity
+      ...Fonts.Inter
     },
   };
 
@@ -69,19 +85,30 @@ import advisro5 from '../../assets/advisor5.png'
             key={advisor.id}
             style={styles.advisorCard}
             onMouseEnter={(e) => {
-              e.currentTarget.style.width = '330px';
-              e.currentTarget.style.paddingTop = '0';
-              e.currentTarget.querySelector('img').style.aspectRatio = '0.76';
-              e.currentTarget.querySelector('img').style.width = '330px';
+              const card = e.currentTarget;
+              const image = card.querySelector('img');
+              const name = card.querySelector('.advisor-name');
+              card.style.width = '330px';
+              card.style.paddingTop = '0';
+              image.style.aspectRatio = '0.76';
+              image.style.width = '330px';
+              name.style.opacity = 1; // Show the name on hover
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.width = '150px';
-              e.currentTarget.style.paddingTop = '116px';
-              e.currentTarget.querySelector('img').style.aspectRatio = '0.42';
-              e.currentTarget.querySelector('img').style.width = '150px';
+              const card = e.currentTarget;
+              const image = card.querySelector('img');
+              const name = card.querySelector('.advisor-name');
+              card.style.width = '150px';
+              card.style.paddingTop = '116px';
+              image.style.aspectRatio = '0.42';
+              image.style.width = '150px';
+              name.style.opacity = 0; // Hide the name when not hovered
             }}
           >
             <img src={advisor.imageSrc} alt="Advisor" style={styles.advisorImage} />
+            <div className="advisor-name" style={styles.advisorName}>
+              {advisor.name}
+            </div>
           </div>
         ))}
       </div>

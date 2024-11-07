@@ -13,8 +13,8 @@ function Header() {
           <Nav className="me-auto">
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">About us</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link href="#aboutUs">About us</Nav.Link>
+            <Nav.Link eventKey={2} href="#team">
               Teams
             </Nav.Link>
             <Nav.Link eventKey={2} href="/contact">

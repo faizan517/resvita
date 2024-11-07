@@ -6,20 +6,20 @@ import Color from "../../utils/Color";
 
 const AboutUs = () => {
   return (
-    <div style={styles.container}>
+    <div style={styles.container} id="aboutUs">
       <Typography variant="h2" style={styles.heading}>
         About Us
       </Typography>
       <div style={styles.divider}></div>
       <Grid container spacing={2} alignItems="center" justifyContent="center">
-        <Grid item xs={12} sm={6} md={6} style={styles.imageContainer}>
+        <Grid item xs={12} sm={6} md={5} style={styles.imageContainer}>
           <img
             src={skin}
             alt="Skin Layer Illustration"
             style={styles.image}
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={6} style={styles.textContainer}>
+        <Grid item xs={12} sm={6} md={5} style={styles.textContainer}>
           <Typography variant="h3" style={styles.subHeading}>
             Transforming Skin Disease Treatment with Synthetic Biology
           </Typography>
@@ -60,8 +60,9 @@ const styles = {
     margin: "10px auto 30px",
   },
   imageContainer: {
-    display: 'flex',
-    justifyContent: 'center',
+    // display: 'flex',
+    // justifyContent: 'center',
+    // backgroundColor:'red'
   },
   image: {
     width: "100%",

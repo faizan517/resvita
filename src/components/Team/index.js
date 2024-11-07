@@ -10,7 +10,7 @@ export default function Main() {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box
+    <Box 
       sx={{
         width: "100%",
         // maxWidth: "1440px",
@@ -26,7 +26,7 @@ export default function Main() {
       }}
     >
       {/* Team Intro Text */}
-      <Box
+      <Box id="team"
         sx={{
           width: { xs: "100%", md: "683px" },
           height: { xs: "auto", md: "167px" },

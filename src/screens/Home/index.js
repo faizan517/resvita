@@ -21,8 +21,9 @@ function Home() {
       <SkinTreatmentBanner />
       <div
         style={{
-          background:
-            "linear-gradient(135deg, #005F99, #033451, #131126, #1E1E1E)",
+          background: "linear-gradient(180deg, #001B34, #000000)", // Adjust colors as needed
+          padding: "50px 0", // Add padding if you want spacing at the top and bottom
+          color: "#FFFFFF", // Set text color to white for contrast
         }}
       >
         {" "}

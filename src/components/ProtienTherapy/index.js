@@ -49,7 +49,7 @@ export default function ContinuousProteinTherapy() {
         sx={{
           fontWeight: "bold",
           fontSize: 32,
-          color: "#000",
+          color: "white",
           marginBottom: 4,
         }}
       >
