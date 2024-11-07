@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/resvita/static/css/main.01801322.css",
+    "main.js": "/resvita/static/js/main.ed39e479.js",
+    "static/js/453.cfcf22e8.chunk.js": "/resvita/static/js/453.cfcf22e8.chunk.js",
+    "static/media/skin.gif": "/resvita/static/media/skin.a7dc2ac6476caf81ba85.gif",
+    "static/media/DNA.gif": "/resvita/static/media/DNA.4af8f0cf79c1722c13c1.gif",
+    "static/media/Backgound.png": "/resvita/static/media/Backgound.9038fd44bb775bc5a44f.png",
+    "static/media/career.png": "/resvita/static/media/career.981bd11ec775cf8df519.png",
+    "static/media/Inter_18pt-Regular.ttf": "/resvita/static/media/Inter_18pt-Regular.86c330c66f7333ff6202.ttf",
+    "static/media/Helvetica.ttf": "/resvita/static/media/Helvetica.06113bf748ae7dc33e05.ttf",
+    "static/media/advisor1.png": "/resvita/static/media/advisor1.262a24ccc756c66bb8a5.png",
+    "static/media/advisor2.png": "/resvita/static/media/advisor2.5f7c16b865f29236c15b.png",
+    "static/media/girl.png": "/resvita/static/media/girl.f54b017849708096e46f.png",
+    "static/media/Roboto-Regular.ttf": "/resvita/static/media/Roboto-Regular.27f62b53b93858475a7f.ttf",
+    "static/media/advisor4.png": "/resvita/static/media/advisor4.81ab3b90cf7b33461910.png",
+    "static/media/Poppins-Regular.ttf": "/resvita/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/advisor3.png": "/resvita/static/media/advisor3.363103475d6617685060.png",
+    "static/media/advisor5.png": "/resvita/static/media/advisor5.c8804c5a70f9579c82dd.png",
+    "static/media/Manrope-Regular.ttf": "/resvita/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
+    "static/media/p2.png": "/resvita/static/media/p2.1993cb3208b36be3eea3.png",
+    "static/media/Heebo-Regular.ttf": "/resvita/static/media/Heebo-Regular.9b5637de5690db8872e4.ttf",
+    "static/media/p1.png": "/resvita/static/media/p1.5443095d9ce22f1c7976.png",
+    "static/media/DMSans-Regular.ttf": "/resvita/static/media/DMSans-Regular.36401d66ca415d09e170.ttf",
+    "static/media/logobg.png": "/resvita/static/media/logobg.ef83bbeb78978c9d5f9e.png",
+    "static/media/slick.svg": "/resvita/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/resvita/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/resvita/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/resvita/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/resvita/index.html",
+    "main.01801322.css.map": "/resvita/static/css/main.01801322.css.map",
+    "main.ed39e479.js.map": "/resvita/static/js/main.ed39e479.js.map",
+    "453.cfcf22e8.chunk.js.map": "/resvita/static/js/453.cfcf22e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01801322.css",
+    "static/js/main.ed39e479.js"
+  ]
+}
