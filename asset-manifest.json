@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/resvita/static/css/main.01801322.css",
-    "main.js": "/resvita/static/js/main.ed39e479.js",
+    "main.js": "/resvita/static/js/main.31849d41.js",
     "static/js/453.cfcf22e8.chunk.js": "/resvita/static/js/453.cfcf22e8.chunk.js",
     "static/media/skin.gif": "/resvita/static/media/skin.a7dc2ac6476caf81ba85.gif",
     "static/media/DNA.gif": "/resvita/static/media/DNA.4af8f0cf79c1722c13c1.gif",
@@ -29,11 +29,11 @@
     "static/media/slick.woff": "/resvita/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/resvita/index.html",
     "main.01801322.css.map": "/resvita/static/css/main.01801322.css.map",
-    "main.ed39e479.js.map": "/resvita/static/js/main.ed39e479.js.map",
+    "main.31849d41.js.map": "/resvita/static/js/main.31849d41.js.map",
     "453.cfcf22e8.chunk.js.map": "/resvita/static/js/453.cfcf22e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.01801322.css",
-    "static/js/main.ed39e479.js"
+    "static/js/main.31849d41.js"
   ]
 }
